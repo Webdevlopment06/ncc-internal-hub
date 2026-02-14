@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NCC Hub Login</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="login-container">
+  <h1>NCC Internal Hub</h1>
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button id="loginBtn">Login</button>
+</div>
+
+<script type="module">
+import { login } from './js/auth.js'
+
+document.getElementById('loginBtn').addEventListener('click', () => {
+  const email = document.getElementById('email').value
+  const password = document.getElementById('password').value
+  login(email, password)
+})
+</script>
+</body>
+</html>
